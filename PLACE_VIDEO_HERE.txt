@@ -1,0 +1,14 @@
+📹 VIDEO FILE REQUIRED
+
+Please add your video file to this folder with the name:
+access.mp4
+
+Video Requirements:
+- Format: MP4 (H.264 codec recommended)
+- Resolution: 1080p or lower for mobile optimization
+- File size: Under 10MB recommended for best performance
+- Orientation: Portrait or landscape (will auto-fit)
+
+Once you add the video file, you can delete this text file.
+
+The website will automatically play this video after the 5-second authentication countdown.
