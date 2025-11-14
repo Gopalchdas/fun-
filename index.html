@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biometric Access</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Fingerprint Authentication Screen -->
+    <div id="auth-screen" class="screen active">
+        <div class="background-grid"></div>
+        <div class="glow-orb glow-orb-1"></div>
+        <div class="glow-orb glow-orb-2"></div>
+        
+        <div class="auth-container">
+            <h1 class="title">BIOMETRIC ACCESS</h1>
+            <p class="subtitle">KNOW YOUR FUTURE</p>
+            
+            <!-- Fingerprint Icon Container -->
+            <div id="fingerprint-container" class="fingerprint-container">
+                <svg id="fingerprint" class="fingerprint" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Fingerprint SVG paths -->
+                    <path d="M100,40 Q120,40 130,50 Q140,60 140,80 Q140,100 130,110" stroke="currentColor" fill="none" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M100,50 Q115,50 122,58 Q130,66 130,80 Q130,94 122,102" stroke="currentColor" fill="none" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M100,60 Q110,60 115,68 Q120,76 120,85 Q120,94 115,100" stroke="currentColor" fill="none" stroke-width="3" stroke-linecap="round"/>
+                    
+                    <path d="M100,40 Q80,40 70,50 Q60,60 60,80 Q60,100 70,110" stroke="currentColor" fill="none" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M100,50 Q85,50 78,58 Q70,66 70,80 Q70,94 78,102" stroke="currentColor" fill="none" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M100,60 Q90,60 85,68 Q80,76 80,85 Q80,94 85,100" stroke="currentColor" fill="none" stroke-width="3" stroke-linecap="round"/>
+                    
+                    <path d="M100,70 Q100,90 100,110" stroke="currentColor" fill="none" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M95,75 Q95,95 95,115" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M105,75 Q105,95 105,115" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"/>
+                    
+                    <path d="M70,110 Q80,130 100,140 Q120,130 130,110" stroke="currentColor" fill="none" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M75,115 Q85,130 100,135 Q115,130 125,115" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"/>
+                    
+                    <circle cx="100" cy="100" r="55" stroke="currentColor" fill="none" stroke-width="2" opacity="0.3"/>
+                    <circle cx="100" cy="100" r="65" stroke="currentColor" fill="none" stroke-width="1" opacity="0.2"/>
+                </svg>
+                
+                <!-- Circular Progress Ring -->
+                <svg class="progress-ring" width="280" height="280">
+                    <circle class="progress-ring-circle" stroke="currentColor" stroke-width="4" fill="transparent" r="135" cx="140" cy="140"/>
+                </svg>
+            </div>
+            
+            <p id="status-text" class="status-text">TAP TO AUTHENTICATE</p>
+            <p id="countdown-text" class="countdown-text"></p>
+        </div>
+    </div>
+
+    <!-- Video Screen -->
+    <div id="video-screen" class="screen">
+        <video id="access-video" playsinline>
+            <source src="assets/access.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <button id="unmute-btn" class="unmute-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <line x1="23" y1="9" x2="17" y2="15"></line>
+                <line x1="17" y1="9" x2="23" y2="15"></line>
+            </svg>
+            <span>TAP TO UNMUTE</span>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
